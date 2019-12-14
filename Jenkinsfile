@@ -11,11 +11,6 @@ pipeline {
                 sh "mvn clean package -f ok-cd/pom.xml"
             }
         }
-        stage ('Deployment Stage') {
-            steps {
-                
-            }
-        }
     }
     post {
       always {
