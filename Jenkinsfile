@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Packaging Stage') {
             steps {
-                sh "mvn clean package -f my-cd/pom.xml"
+                sh "mvn clean package -f ok-cd/pom.xml"
             }
         }
         stage ('Deployment Stage') {
