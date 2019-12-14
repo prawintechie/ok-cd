@@ -1,6 +1,14 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'kdvolder/mvn-plus-npm' }
     }
+    
+     stages {
+        stage ('Packaging Stage') {
+            steps {
+               npm -version
+            }
+        }
+     }
    
 }
