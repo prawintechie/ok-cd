@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'kdvolder/mvn-plus-npm' }
+        docker { run -it image 'kdvolder/mvn-plus-npm' }
     }
     
      stages {
