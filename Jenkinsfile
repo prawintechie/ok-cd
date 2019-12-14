@@ -1,16 +1,12 @@
 pipeline {
     agent {
-      docker {
-        image 'kdvolder/mvn-plus-npm'
-      }
+        docker { image 'node:7-alpine' }
     }
-
     stages {
-        stage ('Packaging Stage') {
+        stage('Test') {
             steps {
-                sh "mvn clean package -f ok-cd/pom.xml"
+                sh 'node --version'
             }
         }
     }
-  
 }
